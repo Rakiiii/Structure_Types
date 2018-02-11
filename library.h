@@ -3,15 +3,21 @@
 
 void hello(void);
 
+/*
+ * St - будет обозначать массив
+ * все новые типы данных обозначаются через _t в конце
+ */
+
+
   /*
    * Структура элементов односвязного спписка
    * обЪявляем новый тип , что б не писсать структуру каждый раз
    */
 
-typedef struct Single_List_Node
+typedef struct _Single_List_Node
 {
     int value = 0 ;
-    struct Single_List *adress ;
+    struct _Single_List *adress ;
 } Single_List_Node_t ;
 
 
@@ -22,7 +28,7 @@ typedef struct Single_List_Node
  * указатель на конец
  */
 
-typedef struct Single_List
+typedef struct _Single_List
 {
     /*
      * размер списка
@@ -193,6 +199,83 @@ void Single_List_push_back ( Single_List_t *St , int data )
 
     St->tail = node ;
     St->size ++ ;
+
+
+    /*
+     * структура элемента двусвязного списка
+     * в каждои узле храним
+     * значение
+     * адрес следующего элемента
+     * адрес предыдущего элемента
+     */
+
+    typedef struct _Double_List_Node
+    {
+        int value ;
+        struct _Double_List_Node *next_adress ;
+        struct _Double_List_Node *prev_adress ;
+    } Double_List_Node_t ;
+
+    /*
+     * добавляем структуру самого двусвязного списка
+     * храним:
+     * размер
+     * адрес первго элемента
+     * адрес последнего элемента
+     */
+
+    typedef struct _Double_List
+    {
+        int size ;
+        Double_List_Node_t *head ;
+        Double_List_Node_t *tail ;
+    } Double_List_t ;
+
+
+    /*
+     * функция создания двусвязного списка
+     */
+
+     Double_List_t* Create_Double_List()
+     {
+
+         /*
+          * выделяем память под список
+          */
+
+         Double_List_t *St = ( Double_List_t* )malloc( sizeof( Double_List_t ) ) ;
+
+         /*
+          * говорим списку, что он пустой
+          * размер равен нулю
+          * адрес начала равен адресу конца
+          * адреса равны нулевому указателю
+          */
+
+         St->size = 0 ;
+         St->head = St->tail = NULL ;
+
+         /*
+          * Возвращаем адрес массива
+          */
+
+         return St ;
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
