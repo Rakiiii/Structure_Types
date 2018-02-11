@@ -172,34 +172,34 @@ int * Single_List_pop ( Single_List_t *St )
 
 void Single_List_push_back ( Single_List_t *St , int data )
 {
-   /*
-    * выделяем память под новый элемент
-    */
+    /*
+     * выделяем память под новый элемент
+     */
 
-   Single_List_Node_t *node = ( Single_List_Node_t * )malloc( sizeof( Single_List_Node_t ) ) ;
+    Single_List_Node_t *node = (Single_List_Node_t *) malloc(sizeof(Single_List_Node_t));
 
     /*
      * передаем значение в список
      */
 
-    node->value = data ;
+    node->value = data;
 
     /*
      * проверяем список на пустоту,если не пуст то прписываем с конца
      * если пуст делаем его первым элементом
      */
 
-    if ( St->tail != NULL ) St->tail->adress = node ;
-    else St->head = node ;
+    if (St->tail != NULL) St->tail->adress = node;
+    else St->head = node;
 
     /*
      * двигаем конец списка на новый элемент
      * инкрементируем длинну списка
      */
 
-    St->tail = node ;
-    St->size ++ ;
-
+    St->tail = node;
+    St->size++;
+}
 
     /*
      * структура элемента двусвязного списка
@@ -208,8 +208,7 @@ void Single_List_push_back ( Single_List_t *St , int data )
      * адрес следующего элемента
      * адрес предыдущего элемента
      */
-
-    typedef struct _Double_List_Node
+typedef struct _Double_List_Node
     {
         int value ;
         struct _Double_List_Node *next_adress ;
@@ -224,7 +223,7 @@ void Single_List_push_back ( Single_List_t *St , int data )
      * адрес последнего элемента
      */
 
-    typedef struct _Double_List
+typedef struct _Double_List
     {
         int size ;
         Double_List_Node_t *head ;
@@ -236,7 +235,7 @@ void Single_List_push_back ( Single_List_t *St , int data )
      * функция создания двусвязного списка
      */
 
-     Double_List_t* Create_Double_List()
+Double_List_t* Create_Double_List()
      {
 
          /*
@@ -262,22 +261,129 @@ void Single_List_push_back ( Single_List_t *St , int data )
          return St ;
      }
 
+     /*
+      * функция добовления элемента в начало
+      */
+
+void Double_List_pushFront ( Double_List_t *St , int data )
+     {
+         /*
+          * выделяем память под новый элемент
+          */
+
+         Double_List_Node_t *node = ( Double_List_Node_t* )malloc( sizeof( Double_List_Node_t ) ) ;
+
+         /*
+          * задаем значение элемента
+          * адрес следующего это адрес начала списка
+          * адрес предыдущего это нулевой указатель
+          */
+
+         node->value = data ;
+         node->next_adress = St->head ;
+         node->prev_adress = NULL ;
+
+         /*
+          * добовляем адрес нового элемента предыдущему головномуу элементу если он был
+          */
+
+         if ( St->head ) St->head->prev_adress = node ;
+
+         /*
+          * если это единтсвенный элемент списка, то адрес конца должен указывать на этот элемент
+          */
+
+         if ( St->tail == NULL ) St->tail = node ;
+
+         /*
+          * двигаем указатель головы на новый элемент
+          * инкриментируем размер списка
+          */
+
+         St->head = node ;
+         St->size ++ ;
+
+     }
 
 
+/*
+ * функция извлечения из начала двусвязного списка
+ */
 
+int* Double_List_popFront( Double_List_t *St )
+{
+    /*
+     * создаем указатель для работы с элементом списка
+     */
 
+    Double_List_Node_t *node ;
 
+    /*
+     * создаем указатель для возвращения значения извлекаемого элемента
+     */
 
+    int *value ;
 
+    /*
+     * берем первый элемент списка
+     */
 
+    node = St->head ;
 
+    /*
+     * двигаем начало списка на одни элемент
+     */
 
+    St->head = St->head->next_adress ;
 
+    /*
+     * если список не пустой, то нулим адрес предыдущего элемента
+     * у головного элемента списка
+     */
 
+    if ( St->head ) St->head->prev_adress = NULL ;
 
+    /*
+     * если адрес извлекаемого элемента совпадает с адресом
+     * конца списка обнуляем адрес конца списка
+     */
 
+    if ( node = St->tail ) St->tail = NULL ;
+
+    /*
+     * переносим значение извлекаемого элемента в возвращаемую ячейку
+     */
+
+    value = node->value ;
+
+    /*
+     * освобождаем память выделенную под извлекаемы элемент
+     */
+
+    free( node ) ;
+
+    /*
+     * дикрементируем размер списка
+     * возвращаем значение элемента
+     */
+
+    St->size -- ;
+    return value ;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
