@@ -9,7 +9,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0df9a92f-1eec-4c4e-9361-d03c5f365668" name="Default" comment="+add front push function for doublelinked list&#10;+add front pop function for doublelinked list" />
+    <list default="true" id="0df9a92f-1eec-4c4e-9361-d03c5f365668" name="Default" comment="+add front push function for doublelinked list&#10;+add front pop function for doublelinked list">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/library.h" afterPath="$PROJECT_DIR$/library.h" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,8 +36,8 @@
       <file leaf-file-name="library.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="475" column="48" lean-forward="true" selection-start-line="475" selection-start-column="48" selection-end-line="475" selection-end-column="48" />
+            <state relative-caret-position="279">
+              <caret line="507" column="37" lean-forward="false" selection-start-line="507" selection-start-column="37" selection-end-line="507" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -141,7 +144,7 @@
       <workItem from="1518368465713" duration="503000" />
       <workItem from="1518370176619" duration="1722000" />
       <workItem from="1518442758331" duration="2061000" />
-      <workItem from="1518456754541" duration="853000" />
+      <workItem from="1518456754541" duration="1445000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;+add push_back function&#10;+rename functions&#10;+preparations for new types">
       <created>1518367375790</created>
@@ -161,7 +164,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10347000" />
+    <option name="totallyTimeSpent" value="10939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -401,8 +404,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="475" column="48" lean-forward="true" selection-start-line="475" selection-start-column="48" selection-end-line="475" selection-end-column="48" />
+        <state relative-caret-position="279">
+          <caret line="507" column="37" lean-forward="false" selection-start-line="507" selection-start-column="37" selection-end-line="507" selection-end-column="37" />
           <folding />
         </state>
       </provider>

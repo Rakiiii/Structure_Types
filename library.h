@@ -480,7 +480,36 @@ int *Double_List_pop_back ( Double_List_t *St )
     return value ;
 }
 
+/*
+ * получение n-го элемента двусвязного списка
+ */
 
+Double_List_Node_t * Double_List_get_nth_element( Double_List_t *St , int index )
+{
+    /*
+     * берем первый элемент списка
+     */
+
+    Double_List_Node_t *node = St->head ;
+
+    int i = 0 ;
+
+    /*
+     * двигаемся по списку до index элемента
+     */
+
+    while ( node && i < index )
+    {
+        node = node->next_adress ;
+        i ++ ;
+    }
+
+    /*
+     * возвращаем необходимый элемент
+     */
+
+    return node ;
+}
 
 
 
