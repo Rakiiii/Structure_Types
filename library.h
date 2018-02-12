@@ -373,6 +373,47 @@ int* Double_List_popFront( Double_List_t *St )
 }
 
 
+/*
+ * функция вствки в конец списка
+ */
+
+void Double_List_push_back ( Double_List_t *St , int data )
+{
+    /*
+     * выделяем память под новый элемент
+     */
+
+    Double_List_Node_t *node = ( Double_List_Node_t * )malloc( sizeof( Double_List_Node_t ) ) ;
+
+    /*
+     * заполняем значение элемента списка
+     * элемент в конце поэтому следующего элемента нет
+     * предыдущий элемент это конец списка
+     */
+
+    node->value = data ;
+    node->next_adress = NULL ;
+    node->prev_adress = St->tail ;
+
+    /*
+     * двигаем конец списка
+     */
+
+    if ( St->tail ) St->tail->next_adress = node ;
+
+    /*
+     * провепряем список на пустоту
+     * если пуст, то начало списка новый элемент
+     */
+
+    if ( St->head == NULL ) St->head = node ;
+
+    /*
+     * инкрементируем размер списка
+     */
+
+    St->size ++ ;
+}
 
 
 
