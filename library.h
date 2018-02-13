@@ -20,7 +20,7 @@ void hello(void);
 typedef struct _Single_List_Node
 {
     int value = 0 ;
-    struct _Single_List *adress ;
+    struct _Single_List_Node *adress ;
 } Single_List_Node_t ;
 
 
@@ -647,8 +647,57 @@ int *Double_List_pop_nth ( Double_List_t *St , int index )
 }
 
 /*
- *
+ *структура листа двоичного дерева
  */
+
+typedef struct _Tree_node
+{
+    int value ;
+    struct  _Tree_node *right ;
+    struct  _Tree_node *left ;
+} Tree_node_t ;
+
+
+/*
+ * структура определяющая двоичное дерево
+ */
+
+typedef struct _Tree
+{
+    Tree_node_t * root ;
+    int size ;
+} Tree_t ;
+
+/*
+ *функция создания дерева
+ */
+
+Tree_t * Creat_tree ( void )
+{
+
+    /*
+     *выделяем память под новое дерево
+     */
+
+    Tree_t *tree = ( Tree_t * )malloc( sizeof( Tree_t ) ) ;
+
+    /*
+     * изначальное дерево пустое
+     * корня нет
+     * размер 0
+     */
+
+    tree->root = NULL ;
+    tree->size = 0 ;
+
+    /*
+     * возвращаем указатель на новое дерево
+     */
+
+    return tree ;
+}
+
+
 
 
 
