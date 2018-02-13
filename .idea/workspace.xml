@@ -36,8 +36,8 @@
       <file leaf-file-name="library.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="699" column="0" lean-forward="true" selection-start-line="699" selection-start-column="0" selection-end-line="699" selection-end-column="0" />
+            <state relative-caret-position="247">
+              <caret line="746" column="3" lean-forward="false" selection-start-line="746" selection-start-column="3" selection-end-line="746" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -148,7 +148,7 @@
       <workItem from="1518459702084" duration="48000" />
       <workItem from="1518534566645" duration="49000" />
       <workItem from="1518534848428" duration="10000" />
-      <workItem from="1518534919494" duration="2772000" />
+      <workItem from="1518534919494" duration="4189000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;+add push_back function&#10;+rename functions&#10;+preparations for new types">
       <created>1518367375790</created>
@@ -178,17 +178,24 @@
       <option name="project" value="LOCAL" />
       <updated>1518546761118</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="+add binary tree node structure&#10;+add binary tree structure&#10;+add binary tree creation function">
+      <created>1518547612515</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1518547612515</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14313000" />
+    <option name="totallyTimeSpent" value="15730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1703125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2164009" sideWeight="0.48125" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2164009" sideWeight="0.51875" order="7" side_tool="true" content_ui="tabs" />
@@ -231,7 +238,8 @@
     <MESSAGE value="+add front push function for doublelinked list&#10;+add front pop function for doublelinked list" />
     <MESSAGE value="+add doublelinked list function to add new element to the n-th position" />
     <MESSAGE value="+add doublelinked list function for pop n-th element" />
-    <option name="LAST_COMMIT_MESSAGE" value="+add doublelinked list function for pop n-th element" />
+    <MESSAGE value="+add binary tree node structure&#10;+add binary tree structure&#10;+add binary tree creation function" />
+    <option name="LAST_COMMIT_MESSAGE" value="+add binary tree node structure&#10;+add binary tree structure&#10;+add binary tree creation function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -520,8 +528,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="699" column="0" lean-forward="true" selection-start-line="699" selection-start-column="0" selection-end-line="699" selection-end-column="0" />
+        <state relative-caret-position="247">
+          <caret line="746" column="3" lean-forward="false" selection-start-line="746" selection-start-column="3" selection-end-line="746" selection-end-column="3" />
           <folding />
         </state>
       </provider>
