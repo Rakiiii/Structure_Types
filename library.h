@@ -520,7 +520,7 @@ Double_List_Node_t * Double_List_get_nth_element( Double_List_t *St , int index 
  * функция добовления элемента на n-ое место в двусвязном списке
  */
 
-void Double_List_node_insert ( Double_List_t *St , int index , int *data )
+void Double_List_push_nth ( Double_List_t *St , int index , int *data )
 {
     /*
      * создаем новый элемент
@@ -588,9 +588,67 @@ void Double_List_node_insert ( Double_List_t *St , int index , int *data )
     St->size ++ ;
 }
 
+/*
+ * функция извлечения n-го элемента из списка
+ */
 
+int *Double_List_pop_nth ( Double_List_t *St , int index )
+{
+     /*
+      * создаем указатель на нужный элемент
+      * достаем нужный элемент
+      */
 
+    Double_List_Node_t *node = Double_List_get_nth_element( St , index ) ;
 
+    /*
+     * создаем указатель на значение которое будем возвращать
+     */
+
+    int *value ;
+
+    /*
+     * удаляем элемент из списка
+     */
+
+    if ( node->prev_adress ) node->prev_adress->next_adress = node->next_adress ;
+
+    if ( node->next_adress ) node->next_adress->prev_adress = node->prev_adress ;
+
+    /*
+     * запоминаем значение элемента по возвращаемому адресу
+     */
+
+    value = node->value ;
+
+    /*
+     * проверяем был ли элемент первым
+     */
+
+    if ( !node->prev_adress ) St->head = node->next_adress ;
+
+    /*
+     * проверяем был ли элемент последним
+     */
+    if ( !node->next_adress ) St->tail = node->prev_adress ;
+
+    /*
+     * освобождаем память занимаему этим эдементом
+     */
+    free( node ) ;
+
+    /*
+     * дикрменетируем размер списка
+     * возвращаем значение извлекаемого элемента
+     */
+
+    St->size -- ;
+    return value ;
+}
+
+/*
+ *
+ */
 
 
 

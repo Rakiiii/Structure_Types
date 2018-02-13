@@ -9,9 +9,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0df9a92f-1eec-4c4e-9361-d03c5f365668" name="Default" comment="+add front push function for doublelinked list&#10;+add front pop function for doublelinked list">
+    <list default="true" id="0df9a92f-1eec-4c4e-9361-d03c5f365668" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
       <change beforePath="$PROJECT_DIR$/library.h" afterPath="$PROJECT_DIR$/library.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="library.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="590" column="0" lean-forward="true" selection-start-line="590" selection-start-column="0" selection-end-line="590" selection-end-column="0" />
+            <state relative-caret-position="631">
+              <caret line="649" column="3" lean-forward="false" selection-start-line="649" selection-start-column="3" selection-end-line="649" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -149,7 +148,7 @@
       <workItem from="1518459702084" duration="48000" />
       <workItem from="1518534566645" duration="49000" />
       <workItem from="1518534848428" duration="10000" />
-      <workItem from="1518534919494" duration="985000" />
+      <workItem from="1518534919494" duration="1946000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;+add push_back function&#10;+rename functions&#10;+preparations for new types">
       <created>1518367375790</created>
@@ -165,11 +164,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518368944742</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="+add doublelinked list function to add new element to the n-th position">
+      <created>1518535960186</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1518535960186</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12526000" />
+    <option name="totallyTimeSpent" value="13487000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
@@ -216,7 +222,8 @@
     <MESSAGE value="&#10;+add push_back function&#10;+rename functions&#10;+preparations for new types" />
     <MESSAGE value="+add doublelinked list node structure&#10;+add doublelinked list structure&#10;+rename older structures for better later codding" />
     <MESSAGE value="+add front push function for doublelinked list&#10;+add front pop function for doublelinked list" />
-    <option name="LAST_COMMIT_MESSAGE" value="+add front push function for doublelinked list&#10;+add front pop function for doublelinked list" />
+    <MESSAGE value="+add doublelinked list function to add new element to the n-th position" />
+    <option name="LAST_COMMIT_MESSAGE" value="+add doublelinked list function to add new element to the n-th position" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -505,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="590" column="0" lean-forward="true" selection-start-line="590" selection-start-column="0" selection-end-line="590" selection-end-column="0" />
+        <state relative-caret-position="631">
+          <caret line="649" column="3" lean-forward="false" selection-start-line="649" selection-start-column="3" selection-end-line="649" selection-end-column="3" />
           <folding />
         </state>
       </provider>
