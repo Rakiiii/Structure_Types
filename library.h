@@ -1,6 +1,9 @@
 #ifndef STRUCTURE_TYPES_LIBRARY_H
 #define STRUCTURE_TYPES_LIBRARY_H
 
+#include <stdio.h>
+#include <stdlib.h>
+
 void hello(void);
 
 /*
@@ -509,7 +512,83 @@ Double_List_Node_t * Double_List_get_nth_element( Double_List_t *St , int index 
      */
 
     return node ;
+
+    
 }
+
+/*
+ * функция добовления элемента на n-ое место в двусвязном списке
+ */
+
+void Double_List_node_insert ( Double_List_t *St , int index , int *data )
+{
+    /*
+     * создаем новый элемент
+     */
+
+    Double_List_Node_t *elm ;
+
+    /*
+     * берем элемент после которого должен стоять новый элемент
+     */
+
+    Double_List_Node_t *prev ;
+    prev = Double_List_get_nth_element( St , index ) ;
+
+    /*
+     * выделяем память под новый элемент
+     */
+
+    elm = ( Double_List_Node_t * )malloc( sizeof( Double_List_Node_t ) ) ;
+
+    /*
+     * передаем новому элементу значение
+     */
+
+    elm->value = data ;
+
+    /*
+     * вставляем новый элемент в наш список
+     */
+
+    elm->prev_adress = prev ;
+    elm->next_adress = prev->next_adress ;
+
+    /*
+     * если новый эдемент не последний , то добовляем ссылку на него
+     * следуюзему эдементу
+     */
+
+    if ( elm->next_adress ) elm->next_adress->prev_adress = elm ;
+
+    /*
+     * предыдущий элемент так же должен ссылаться на только что добавленный элемент
+     */
+
+    prev->next_adress = elm ;
+
+    /*
+     * проверям есть ли предыдущий эдемент
+     * если нет то новый элемент начало списка
+     */
+
+    if ( !elm->prev_adress ) St->head = elm ;
+
+    /*
+     * проверяем есть ли элемент после
+     * если нет то новый элемент конец списка
+     */
+
+    if ( !elm->next_adress ) St->tail = elm ;
+
+    /*
+     * инкрементируем размер списка
+     */
+
+    St->size ++ ;
+}
+
+
 
 
 
