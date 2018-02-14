@@ -36,8 +36,8 @@
       <file leaf-file-name="library.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="746" column="3" lean-forward="false" selection-start-line="746" selection-start-column="3" selection-end-line="746" selection-end-column="3" />
+            <state relative-caret-position="511">
+              <caret line="818" column="0" lean-forward="true" selection-start-line="818" selection-start-column="0" selection-end-line="818" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,7 +148,7 @@
       <workItem from="1518459702084" duration="48000" />
       <workItem from="1518534566645" duration="49000" />
       <workItem from="1518534848428" duration="10000" />
-      <workItem from="1518534919494" duration="4189000" />
+      <workItem from="1518534919494" duration="5541000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;+add push_back function&#10;+rename functions&#10;+preparations for new types">
       <created>1518367375790</created>
@@ -185,11 +185,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518547612515</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=" +add tree search function">
+      <created>1518552284584</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1518552284584</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15730000" />
+    <option name="totallyTimeSpent" value="17082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
@@ -239,7 +246,8 @@
     <MESSAGE value="+add doublelinked list function to add new element to the n-th position" />
     <MESSAGE value="+add doublelinked list function for pop n-th element" />
     <MESSAGE value="+add binary tree node structure&#10;+add binary tree structure&#10;+add binary tree creation function" />
-    <option name="LAST_COMMIT_MESSAGE" value="+add binary tree node structure&#10;+add binary tree structure&#10;+add binary tree creation function" />
+    <MESSAGE value=" +add tree search function" />
+    <option name="LAST_COMMIT_MESSAGE" value=" +add tree search function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -528,8 +536,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="746" column="3" lean-forward="false" selection-start-line="746" selection-start-column="3" selection-end-line="746" selection-end-column="3" />
+        <state relative-caret-position="511">
+          <caret line="818" column="0" lean-forward="true" selection-start-line="818" selection-start-column="0" selection-end-line="818" selection-end-column="0" />
           <folding />
         </state>
       </provider>

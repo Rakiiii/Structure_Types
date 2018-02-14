@@ -744,8 +744,76 @@ int Tree_search ( Tree_t *tree , int data )
 }
 
 /*
- *
+ *функция добовления листа в дереаво
  */
+
+int Tree_push ( Tree_t *tree , int data )
+{
+
+    /*
+     * создаем указатель на новый узел и указаталь на узел для поиска
+     */
+
+    Tree_node_t* Snode , **new_node ;
+
+    /*
+     * присваиваем им значение корня дерева и его адрес соответственно
+     */
+
+    Snode = tree->root ;
+    new_node = &tree->root ;
+
+    /*
+     * проходим све дерево
+     */
+
+    while ( TRUE )
+    {
+        /*
+         * проверяем дерево на пустоту
+         * если пустое то корень новый элемент
+         */
+
+        if ( Snode == NULL )
+        {
+            Snode = *new_node = malloc( sizeof * Snode ) ;
+            if ( Snode != NULL )
+                                  {
+                                      /*
+                                       * присваиваем поисковой ноде значение
+                                       * инкрементируем размер дерева
+                                       */
+
+                                      Snode->value = data ;
+                                      Snode->left = Snode->right = NULL ;
+                                      tree->size ++ ;
+                                  }
+                /*
+                 * если такой узел уже есть возврааем 2
+                 */
+
+            else if ( Snode->value == data ) return 2 ;
+
+            /*
+             * если добовляемое значение больше значения поискового узла
+             * идем направо
+             * в ином случае на лево
+             */
+
+            else if ( data > Snode->value )
+            {
+                new_node = &Snode->right ;
+                Snode = Snode->right ;
+            }
+            else
+            {
+                new_node = &Snode->left ;
+                Snode = Snode->left ;
+            }
+        }
+
+    }
+}
 
 
 
