@@ -816,7 +816,95 @@ int Tree_push ( Tree_t *tree , int data )
 }
 
 
+/*
+ * функция удаления узла из дерева
+ */
 
+int Tree_delete ( Tree_t * tree , int ** data )
+{
+
+    Tree_node_t ** Qnode , *Znode ;
+
+    Qnode = &tree->root ;
+    Znode = tree->root ;
+
+    /*
+     * ищем удаляемый элемент
+     */
+
+    for(;;)
+    {
+        /*
+         * провеояем на ошибку памяти
+         */
+
+        if ( Znode == NULL ) return -1 ;
+
+            /*
+             * если равно то мы нашли нужный элемент
+             */
+
+        else if ( data == ( int **  )Znode->value ) break ;
+
+            /*
+             * если значение в узле больше искомово то идем на право
+             */
+
+        else if ( data >  ( int ** )Znode->value )
+        {
+            Qnode = &Znode->right ;
+            Znode = Znode->right ;
+        }
+
+        /*
+         * во всех оставшихся случаях идем на лево
+         */
+
+        else
+        {
+            Qnode = &Znode->left ;
+            Znode = Znode->left ;
+        }
+    }
+
+    /*
+     * удаляем необходимы элемент
+     */
+
+    if ( Znode->right == NULL )*Qnode = Znode->left ;
+    else
+    {
+        Tree_node_t *Ynode = Znode->right ;
+        if ( Ynode->left == NULL )
+        {
+            Ynode->left = Znode->left ;
+            *Qnode-Ynode ;
+        }
+        else
+        {
+            Tree_node_t *Xnode = Ynode->left ;
+            while ( Xnode->left != NULL )
+            {
+                Ynode = Xnode ;
+                Xnode = Ynode->left ;
+            }
+            Ynode->left = Xnode->right ;
+            Xnode->left = Znode->left ;
+            Xnode->right = Znode->right ;
+            *Qnode = Xnode ;
+        }
+    }
+
+    /*
+     * уменьшаем размер дерева
+     * освобождаем место занимаемое удаляемым элементом
+     * возвращаем еденицу как отсутствие ошибки
+     */
+
+    tree->size -- ;
+    free ( Znode ) ;
+    return 1 ;
+}
 
 
 

@@ -36,8 +36,8 @@
       <file leaf-file-name="library.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="818" column="0" lean-forward="true" selection-start-line="818" selection-start-column="0" selection-end-line="818" selection-end-column="0" />
+            <state relative-caret-position="607">
+              <caret line="889" column="13" lean-forward="true" selection-start-line="889" selection-start-column="13" selection-end-line="889" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -148,7 +148,7 @@
       <workItem from="1518459702084" duration="48000" />
       <workItem from="1518534566645" duration="49000" />
       <workItem from="1518534848428" duration="10000" />
-      <workItem from="1518534919494" duration="5541000" />
+      <workItem from="1518534919494" duration="7867000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;+add push_back function&#10;+rename functions&#10;+preparations for new types">
       <created>1518367375790</created>
@@ -192,11 +192,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518552284584</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="+add binary tree function to add new node">
+      <created>1518590221424</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1518590221424</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17082000" />
+    <option name="totallyTimeSpent" value="19408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
@@ -247,7 +254,8 @@
     <MESSAGE value="+add doublelinked list function for pop n-th element" />
     <MESSAGE value="+add binary tree node structure&#10;+add binary tree structure&#10;+add binary tree creation function" />
     <MESSAGE value=" +add tree search function" />
-    <option name="LAST_COMMIT_MESSAGE" value=" +add tree search function" />
+    <MESSAGE value="+add binary tree function to add new node" />
+    <option name="LAST_COMMIT_MESSAGE" value="+add binary tree function to add new node" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -536,8 +544,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="818" column="0" lean-forward="true" selection-start-line="818" selection-start-column="0" selection-end-line="818" selection-end-column="0" />
+        <state relative-caret-position="607">
+          <caret line="889" column="13" lean-forward="true" selection-start-line="889" selection-start-column="13" selection-end-line="889" selection-end-column="13" />
           <folding />
         </state>
       </provider>
