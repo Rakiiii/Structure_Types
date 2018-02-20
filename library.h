@@ -906,6 +906,15 @@ int Tree_delete ( Tree_t * tree , int ** data )
     return 1 ;
 }
 
+void Tree_print(Tree_node_t *root , const char *dir , int level )
+{
+    if ( root )
+    {
+        printf("level %d %s =%d\n", level, dir, root->value);
+        Tree_print(root->right, "right", level + 1);
+        Tree_print(root->left, "left", level + 1);
+    }
+}
 
 
 
